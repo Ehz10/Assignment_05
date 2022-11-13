@@ -6,7 +6,6 @@
 # Tiago, 2022-Nov-05, Updated File
 # Tiago, 2022-Nov-12, Modefied to use dictionaries instead of Lists
 #------------------------------------------#
-import os
 # 1. Display menu allowing the user to choose: 'Add CD', 'Display Current Inventory', 'Save Inventory to file' and 'exit'
 strChoice = ''
 dicRow = []
@@ -74,11 +73,10 @@ while True:
         objFile = open(strFileName, 'w')
         for row in lstTblData:
             objFile.write(str(row['id']) + ',' + row['cdtitle'] + ',' + row['artistname'] + '\n')
-        print('Added to ' , strFileName, ' !')
         objFile.close()
         lstTblData = []
         delChoice = None
-# . Check if the User have choose something from the List
+# 8. Check if the User have choose something from the List
     else:
         print('Wrong choice')
         print('-------------------------')
